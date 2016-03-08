@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -9,8 +10,14 @@
 <body>
 
     <div ng-app="app">
-        <div ng-controller="ContactController">
-            Hello, {{ name }}!
+        <div ng-controller="ContactController as contact">
+            Hello, {{ contact.name }}!
+            
+            <button ng-click="contact.changeName()">change contact name</button>
+            <div ng-controller="StaffController as staff">
+                Hello, {{ staff.name }}!
+                
+            </div>
         </div>
     </div>
 
